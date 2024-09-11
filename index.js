@@ -8,7 +8,9 @@ app.get('/sum',function(req,res){
     const a = parseInt(req.query.a);
     const b = parseInt(req.query.b);
     const sum = a+b;
-    res.status(200).send(sum.toString())
+    res.status(200).json({
+        sum
+    })
 })
 
 app.listen(3000)
